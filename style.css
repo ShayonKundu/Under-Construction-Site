@@ -44,22 +44,13 @@
 
 .typewrite {
   font-size: 2rem;
-  border-right: 2px solid rgba(255, 255, 255, .75);
   line-height: 1.15;
 }
 
-.anim-typewrite {
-  animation: blinkTextCursor 500ms infinite normal;
-}
-
-@keyframes blinkTextCursor {
-  from {
-    border-right-color: rgba(255, 255, 255, 1);
-  }
-
-  to {
-    border-right-color: transparent;
-  }
+.typewrite::after {
+  content: "_";
+  display: inline;
+  animation: blink 0.5s infinite;
 }
 
 .footer {
